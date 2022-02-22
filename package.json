@@ -15,6 +15,7 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "firebase": "^9.6.7",
     "gatsby": "^4.8.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
