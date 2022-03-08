@@ -1,6 +1,12 @@
 import React from "react";
 
-const LoginForm = ({ handleSubmit, emailRef, passwordRef, message }) => {
+const CreateUserForm = ({
+  handleSubmit,
+  emailRef,
+  passwordRef,
+  confirmPasswordRef,
+  message,
+}) => {
   return (
     <form
       className="flex justify-center content-center flex-col"
@@ -27,6 +33,16 @@ const LoginForm = ({ handleSubmit, emailRef, passwordRef, message }) => {
           ref={passwordRef}
         />
       </label>
+      <label className="flex flex-col mb-6">
+        Confirm Password
+        <input
+          className="border-solid border-2 border-slate-200 rounded-md text-xl leading-10"
+          type="text"
+          name="password"
+          id="password"
+          ref={confirmPasswordRef}
+        />
+      </label>
       <button
         className="flex justify-center content-center w-fit text-white bg-slate-400 hover:bg-slate-500 py-1.5 px-4 m-auto rounded"
         type="submit"
@@ -37,4 +53,4 @@ const LoginForm = ({ handleSubmit, emailRef, passwordRef, message }) => {
   );
 };
 
-export default LoginForm;
+export default CreateUserForm;
