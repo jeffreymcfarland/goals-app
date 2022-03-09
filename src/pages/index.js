@@ -57,7 +57,7 @@ const IndexPage = () => {
     signOut(auth)
       .then(() => {
         setUserAuth();
-        console.log("sign out succesful");
+        setMessage("");
       })
       .catch((error) => {
         console.log(error);
@@ -109,7 +109,10 @@ const IndexPage = () => {
             Already have an account? Click&nbsp;
             <button
               className="underline text-blue-400"
-              onClick={() => setNewUser(false)}
+              onClick={() => {
+                setNewUser(false);
+                setMessage("");
+              }}
             >
               here
             </button>
@@ -127,7 +130,10 @@ const IndexPage = () => {
             Need to make an account? Click&nbsp;
             <button
               className="underline text-blue-400"
-              onClick={() => setNewUser(true)}
+              onClick={() => {
+                setNewUser(true);
+                setMessage("");
+              }}
             >
               here
             </button>
