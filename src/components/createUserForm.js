@@ -2,6 +2,8 @@ import React from "react";
 
 const CreateUserForm = ({
   handleSubmit,
+  firstNameRef,
+  lastNameRef,
   emailRef,
   passwordRef,
   confirmPasswordRef,
@@ -13,6 +15,26 @@ const CreateUserForm = ({
       onSubmit={handleSubmit}
     >
       {message && <p className="text-red-500 mb-2">{message}</p>}
+      <label className="flex flex-col mb-6">
+        First Name
+        <input
+          className="border-solid border-2 border-slate-200 rounded-md text-xl leading-10"
+          type="text"
+          name="firstName"
+          id="firstName"
+          ref={firstNameRef}
+        />
+      </label>
+      <label className="flex flex-col mb-6">
+        Last Name
+        <input
+          className="border-solid border-2 border-slate-200 rounded-md text-xl leading-10"
+          type="text"
+          name="lastName"
+          id="lastName"
+          ref={lastNameRef}
+        />
+      </label>
       <label className="flex flex-col mb-6">
         Email
         <input
@@ -27,7 +49,7 @@ const CreateUserForm = ({
         Password
         <input
           className="border-solid border-2 border-slate-200 rounded-md text-xl leading-10"
-          type="text"
+          type="password"
           name="password"
           id="password"
           ref={passwordRef}
@@ -37,9 +59,9 @@ const CreateUserForm = ({
         Confirm Password
         <input
           className="border-solid border-2 border-slate-200 rounded-md text-xl leading-10"
-          type="text"
-          name="password"
-          id="password"
+          type="password"
+          name="confirmPassword"
+          id="confirmPassword"
           ref={confirmPasswordRef}
         />
       </label>

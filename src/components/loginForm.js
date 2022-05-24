@@ -21,7 +21,7 @@ const LoginForm = ({ handleSubmit, emailRef, passwordRef, message }) => {
         Password
         <input
           className="border-solid border-2 border-slate-200 rounded-md text-xl leading-10"
-          type="text"
+          type="password"
           name="password"
           id="password"
           ref={passwordRef}
