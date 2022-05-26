@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { Link, navigate } from "gatsby";
-import { getUser, isLoggedIn, logout } from "../services/auth";
+import { navigate } from "gatsby";
+import { isLoggedIn, logout } from "../services/auth";
 import { getAuth, signOut } from "firebase/auth";
 
 import NavItem from "./navLink";
