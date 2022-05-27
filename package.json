@@ -17,6 +17,9 @@
   "dependencies": {
     "firebase": "^9.6.7",
     "gatsby": "^4.8.0",
+    "gatsby-plugin-image": "^2.15.0",
+    "gatsby-plugin-sharp": "^4.15.0",
+    "gatsby-source-filesystem": "^4.15.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "sass": "^1.49.9"
