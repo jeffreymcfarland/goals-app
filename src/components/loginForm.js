@@ -1,39 +1,26 @@
 import React from "react";
 
+import Form from "./form";
+import Label from "./label";
+import Button from "./button";
+import Input from "./input";
+
 const LoginForm = ({ handleSubmit, emailRef, passwordRef, message }) => {
   return (
-    <form
-      className="flex justify-center content-center flex-col"
-      onSubmit={handleSubmit}
-    >
+    <Form submitHandler={handleSubmit}>
       {message && <p className="text-red-500 mb-2">{message}</p>}
-      <label className="flex flex-col mb-6">
+      <Label>
         Email
-        <input
-          className="border-solid border-2 border-slate-200 rounded-md text-xl leading-10"
-          type="email"
-          name="email"
-          id="email"
-          ref={emailRef}
-        />
-      </label>
-      <label className="flex flex-col mb-6">
+        <Input type="email" ref={emailRef} />
+      </Label>
+      <Label>
         Password
-        <input
-          className="border-solid border-2 border-slate-200 rounded-md text-xl leading-10"
-          type="password"
-          name="password"
-          id="password"
-          ref={passwordRef}
-        />
-      </label>
-      <button
-        className="flex justify-center content-center w-fit text-white bg-slate-400 hover:bg-slate-500 py-1.5 px-4 m-auto rounded"
-        type="submit"
-      >
-        Submit
-      </button>
-    </form>
+        <Input type="password" ref={passwordRef} />
+      </Label>
+      <Button type="submit" className="m-auto">
+        Sign In
+      </Button>
+    </Form>
   );
 };
 

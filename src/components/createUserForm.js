@@ -1,5 +1,10 @@
 import React from "react";
 
+import Form from "./form";
+import Label from "./label";
+import Input from "./input";
+import Button from "./button";
+
 const CreateUserForm = ({
   handleSubmit,
   firstNameRef,
@@ -10,12 +15,9 @@ const CreateUserForm = ({
   message,
 }) => {
   return (
-    <form
-      className="flex justify-center content-center flex-col"
-      onSubmit={handleSubmit}
-    >
+    <Form submitHandler={handleSubmit}>
       {message && <p className="text-red-500 mb-2">{message}</p>}
-      <label className="flex flex-col mb-6">
+      <Label>
         First Name
         <input
           className="border-solid border-2 border-slate-200 rounded-md text-xl leading-10"
@@ -24,8 +26,8 @@ const CreateUserForm = ({
           id="firstName"
           ref={firstNameRef}
         />
-      </label>
-      <label className="flex flex-col mb-6">
+      </Label>
+      <Label>
         Last Name
         <input
           className="border-solid border-2 border-slate-200 rounded-md text-xl leading-10"
@@ -34,8 +36,8 @@ const CreateUserForm = ({
           id="lastName"
           ref={lastNameRef}
         />
-      </label>
-      <label className="flex flex-col mb-6">
+      </Label>
+      <Label>
         Email
         <input
           className="border-solid border-2 border-slate-200 rounded-md text-xl leading-10"
@@ -44,8 +46,8 @@ const CreateUserForm = ({
           id="email"
           ref={emailRef}
         />
-      </label>
-      <label className="flex flex-col mb-6">
+      </Label>
+      <Label>
         Password
         <input
           className="border-solid border-2 border-slate-200 rounded-md text-xl leading-10"
@@ -54,8 +56,8 @@ const CreateUserForm = ({
           id="password"
           ref={passwordRef}
         />
-      </label>
-      <label className="flex flex-col mb-6">
+      </Label>
+      <Label>
         Confirm Password
         <input
           className="border-solid border-2 border-slate-200 rounded-md text-xl leading-10"
@@ -64,14 +66,11 @@ const CreateUserForm = ({
           id="confirmPassword"
           ref={confirmPasswordRef}
         />
-      </label>
-      <button
-        className="flex justify-center content-center w-fit text-white bg-slate-400 hover:bg-slate-500 py-1.5 px-4 m-auto rounded"
-        type="submit"
-      >
-        Submit
-      </button>
-    </form>
+      </Label>
+      <Button type="submit" className="m-auto">
+        Create Account
+      </Button>
+    </Form>
   );
 };
 

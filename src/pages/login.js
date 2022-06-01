@@ -94,7 +94,7 @@ const Login = ({ location }) => {
         <p className={`text-md text-center ${message ? "mb-1" : "mb-6"}`}>
           {newUser
             ? "Enter an email and password to create a new account"
-            : "Enter your account email and password to login"}
+            : "Enter your account email and password to sign in"}
         </p>
         {newUser ? (
           <>

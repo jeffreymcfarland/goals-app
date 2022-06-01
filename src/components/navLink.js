@@ -1,11 +1,20 @@
 import React from "react";
+import classNames from "classnames";
+import { Link } from "gatsby";
 
-const NavItem = ({ href, children }) => {
+const NavLink = ({ activeClassName, className, children, href, ...rest }) => {
+  const navLinkClasses = classNames("text-slate-800", className);
+
   return (
-    <li className="ml-12">
-      <a href={href}>{children}</a>
-    </li>
+    <Link
+      to={href}
+      className={navLinkClasses}
+      activeClassName={activeClassName}
+      {...rest}
+    >
+      {children}
+    </Link>
   );
 };
 
-export default NavItem;
+export default NavLink;
