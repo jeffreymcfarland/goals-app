@@ -3,6 +3,8 @@ import { isLoggedIn } from "../services/auth";
 import { Link, navigate } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 
+import Button from "../components/button";
+
 const IndexPage = () => {
   if (isLoggedIn()) {
     navigate("/dashboard");
@@ -21,20 +23,17 @@ const IndexPage = () => {
               to acheive.
             </p>
             <div className="flex justify-center gap-3">
-              <Link
-                to="/login"
-                state={{ newUser: true }}
-                className="px-4 py-2 rounded-md text-white bg-slate-500 hover:bg-slate-600"
-              >
+              <Button element={Link} to="/login" state={{ newUser: true }}>
                 Get Started
-              </Link>
-              <Link
+              </Button>
+              <Button
+                appearance="subtle"
+                element={Link}
                 to="/login"
                 state={{ newUser: false }}
-                className="px-4 py-2 rounded-md text-slate-500 bg-white hover:bg-slate-100"
               >
                 Sign In
-              </Link>
+              </Button>
             </div>
           </div>
         </div>
