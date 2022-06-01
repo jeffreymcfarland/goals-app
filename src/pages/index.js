@@ -12,8 +12,8 @@ const IndexPage = () => {
   } else {
     return (
       <div className="h-screen grid grid-cols-1 md:grid-cols-2">
-        <div className="flex shadow-2xl z-10">
-          <div className="m-auto text-center p-3">
+        <div className="bg-transparent flex absolute w-screen h-screen z-10 md:w-auto md:bg-white md:relative md:shadow-2xl">
+          <div className="m-auto text-center p-3 m-auto">
             <h1 className="font-semibold text-6xl mb-4 text-slate-800">
               My Goals
             </h1>
@@ -38,7 +38,7 @@ const IndexPage = () => {
           </div>
         </div>
         <StaticImage
-          className="h-screen absolute md:relative opacity-50 md:opacity-80"
+          className="h-screen opacity-50 md:opacity-80"
           src="../images/cool-background.png"
           alt="abstract vector art"
         />
